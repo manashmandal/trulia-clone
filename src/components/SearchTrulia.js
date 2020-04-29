@@ -6,7 +6,11 @@ import { searchAction } from "../actions";
 
 const { Search } = Input;
 
-const SearchTrulia = () => {
+const mapStateToProps = (state) => state;
+
+const SearchTrulia = ({ loading }) => {
+  console.log("LOADING FROM SEARCH TRULIA ", loading);
+
   return (
     <Search
       placeholder="Enter location"
@@ -17,4 +21,4 @@ const SearchTrulia = () => {
   );
 };
 
-export default connect()(SearchTrulia);
+export default connect(mapStateToProps)(SearchTrulia);

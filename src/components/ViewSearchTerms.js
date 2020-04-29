@@ -35,10 +35,15 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const ViewSearchTerms = ({ searchTerm, searchIt }) => {
+const ViewSearchTerms = ({ searchTerm, loading, searchIt }) => {
   console.log("input", searchTerm);
+  console.log("LOADING ", loading);
   // fuckIt("FUCKING HELLL");
-  return <Button onClick={() => searchIt(searchTerm)}>Search Me</Button>;
+  return (
+    <Button onClick={() => searchIt(searchTerm)} loading={loading}>
+      Search Me
+    </Button>
+  );
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewSearchTerms);
