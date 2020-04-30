@@ -5,11 +5,15 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { store } from "./store";
 import { Provider } from "react-redux";
+import { ApolloProvider } from "@apollo/react-hooks";
+import ApolloClient from "apollo-boost";
+
+
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
   document.getElementById("root")
 );
 

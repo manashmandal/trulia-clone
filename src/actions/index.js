@@ -3,7 +3,12 @@ export const searchAction = (searchTerm) => ({
   payload: { searchTerm },
 });
 
-export const fuckFunction = (whatTheFuck) => ({
-  type: "FUCK",
-  payload: { whatTheFuck },
+export const setLoading = (loading) => ({
+  type: "SEARCH_STATUS",
+  payload: { loading },
+});
+
+export const fetchedProperties = (properties) => ({
+  type: "FETCHED_PROPERTIES",
+  payload: { properties },
 });
